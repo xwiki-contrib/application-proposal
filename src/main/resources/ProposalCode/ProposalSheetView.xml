@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.1">
+  <web>ProposalCode</web>
+  <name>ProposalSheetView</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1383565330000</creationDate>
+  <parent>ProposalCode.ProposalSheet</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1383571247000</date>
+  <contentUpdateDate>1383571247000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Proposal Sheet View</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content>{{velocity output='false'}}
+#set ($discard=$xwiki.linkx.use('//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css', {'rel': 'stylesheet'})) ## Pull the Font Awesome style
+#set ($participants = $!doc.getValue('participants'))
+#set ($issues = $!doc.getValue('issues'))
+#set ($mails = $!doc.getValue('mails'))
+#set ($other = $!doc.getValue('other'))
+{{/velocity}}{{velocity}}
+#if ("$!doc.getObject('ProposalCode.ProposalClass')" != '')
+(% class='floatinginfobox col-xs-12 col-sm-6' %)(((
+(% class='row well well-sm' %)(((
+(% class='col-xs-12 col-sm-6' %)(((
+  ; {{html}}&lt;label for="Proposal.ProposalClass_0_type"&gt;$doc.displayPrettyName('type')&lt;/label&gt;{{/html}}
+  : (% class="property-Type Type-${doc.getValue('type')}" %) $doc.type
+)))
+(% class='col-xs-12 col-sm-6' %)(((
+  ; {{html}}&lt;label for="Proposal.ProposalClass_0_status"&gt;$doc.displayPrettyName('status')&lt;/label&gt;{{/html}}
+  : (% class="property-Status Status-${doc.getValue('status')}" %) $doc.status
+)))
+#if ("$participants" != '')
+(% class='col-xs-12' %)(((
+  ; {{html}}&lt;label for="Proposal.ProposalClass_0_participants"&gt;$doc.displayPrettyName('participants')&lt;/label&gt;{{/html}}
+  : $doc.participants
+)))
+#end
+#if ("$issues" != '')
+(% class='col-xs-12 proposal-issues' %)(((
+  ; {{html}}&lt;label for="Proposal.ProposalClass_0_issues"&gt;$doc.displayPrettyName('issues')&lt;/label&gt;{{/html}}
+  : #if ($issues.contains('http'))
+      $issues
+    #else
+     {{jira url='http://jira.xwiki.org' style='list'}}
+       $issues
+     {{/jira}}
+   #end
+)))
+#end
+)))
+)))
+#if ("$mails" != '')
+  ; {{icon name='envelope'/}}{{html}}&lt;label for="Proposal.ProposalClass_0_mails"&gt;$doc.displayPrettyName('mails')&lt;/label&gt;{{/html}}
+  : $doc.mails
+#end
+#if ("$other" != '')
+  ; {{icon name='link'/}}{{html}}&lt;label for="Proposal.ProposalClass_0_other"&gt;$doc.displayPrettyName('other')&lt;/label&gt;{{/html}}
+  : $doc.other
+#end
+#if ("$!doc.content" != '')
+  = $doc.displayPrettyName('description') =
+  $doc.display('description')
+#end
+#end ## Main if
+{{/velocity}}</content>
+</xwikidoc>

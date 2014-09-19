@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.1">
+  <web>ProposalCode</web>
+  <name>ProposalTranslations</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1383565330000</creationDate>
+  <parent>ProposalCode.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1406879234000</date>
+  <contentUpdateDate>1406879234000</contentUpdateDate>
+  <version>1.1</version>
+  <title>ProposalTranslations</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content># Class fields
+ProposalCode.ProposalClass_name=Name
+ProposalCode.ProposalClass_type=Type
+ProposalCode.ProposalClass_type_t3=Implementation
+ProposalCode.ProposalClass_type_t2=Design
+ProposalCode.ProposalClass_type_t1=Requirements
+ProposalCode.ProposalClass_type_t4=Feature
+ProposalCode.ProposalClass_status=Status
+ProposalCode.ProposalClass_status_s2=Active
+ProposalCode.ProposalClass_status_s1=Idea
+ProposalCode.ProposalClass_status_s5=Dropped
+ProposalCode.ProposalClass_status_s3=Dormant
+ProposalCode.ProposalClass_status_s4=Completed
+ProposalCode.ProposalClass_participants=Participants
+ProposalCode.ProposalClass_issues=Issues
+ProposalCode.ProposalClass_mails=Mails
+ProposalCode.ProposalClass_other=Other URLs
+ProposalCode.ProposalClass_description=Description
+
+# Add proposal
+proposal.proposalAdd.heading=Add proposal
+proposal.proposalAdd.label=Proposal name &amp;hellip;
+proposal.proposalAdd.submit=Add
+
+# Edit proposal
+proposal.proposalEdit.name.hint=Name of the proposal
+proposal.proposalEdit.type.hint=Type or phase of the proposal
+proposal.proposalEdit.status.hint=Status of the proposal
+proposal.proposalEdit.participants.hint=List of participants involved in defining/designing/implementing the proposal
+proposal.proposalEdit.issues.hint=List of issues related to the proposal
+proposal.proposalEdit.mails.hint=List of discussions held about the proposal's topic
+proposal.proposalEdit.other.hint=List of other links relevant to the proposal's topic
+proposal.proposalEdit.description.hint=Details about the proposal
+
+# List proposals
+proposal.proposalList.heading=Available proposals
+
+# List proposals children
+proposal.proposalListChildren.heading=Related proposals
+
+# Livetable generic keys
+proposal.livetable.doc.creationDate=Created
+proposal.livetable.doc.date=Last modified
+proposal.livetable.emptyvalue=-
+
+#  Livetable specific keys
+proposal.livetable.name=Name
+proposal.livetable.type=Type
+proposal.livetable.status=Status
+proposal.livetable.participants=Participants
+proposal.livetable.issues=Jiras
+proposal.livetable.mails=Mails
+proposal.livetable.other=Other URLs
+proposal.livetable.description=Description</content>
+  <object>
+    <name>ProposalCode.ProposalTranslations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>6e6161f7-fda6-483d-9c36-d5717fcdcb27</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+</xwikidoc>
